@@ -57,7 +57,7 @@ def uploaded_chest():
         r'models\covid_model.h5')
 
     image = cv2.imread(
-        r'C:\Users\inba2\Documents\TRI\TRINIT_Blank_ML01\flask app\assets\images\upload_chest.jpg')  # read file
+        r'flask app\assets\images\upload_chest.jpg')  # read file
 
    # arrange format as per keras
     image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
