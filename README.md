@@ -10,15 +10,9 @@ Our project aims to create a COVID-19 web-based chatbot which replies to COVID-1
 * CSS
 * Flask
 
-<!-- GETTING STARTED -->
-## Getting Started
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
-
 <br>
 
+<!-- GETTING STARTED -->
 ### Installation
 
 1. Clone the repo
@@ -27,16 +21,21 @@ To get a local copy up and running follow these simple example steps.
    ```
 2. Install TensorFlow libraries and other dependancies
    ```sh
-   pip install pipreqs
-   pip install -r requirements.text
+   pip install -r requirements.txt
    ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
 <br>
 
 ### Chatbot features
-The chatbot
+The chatbot uses an NLP-based model which is built upon the <i>Universal Sentence Encoder</i> of the TensorFlow libraries. This model uses a WHO_FAQ dataset to map the user inputted sentence to the nearest sentence within the dataset and provide the most accurate response.
+
+<br>
+
+### Lung X-Ray Classifier
+The classification model of Lung X-rays as 'Covid' and 'Non-Covid' is based on a simple Convolutional Neural Network trained on a dataset for 25 epochs.
+
+<br>
 
 ## Team Members
 1. Ashish Bharath - NITK  
