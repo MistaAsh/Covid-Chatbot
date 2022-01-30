@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+
+        <title>Apollo COVID-19 Chatbot</title>
+        <meta name="description" content="Apollo COVID-19 Chatbot" />
+        <link rel="stylesheet" href="style.css" />
+    <script async src='/cdn-cgi/bm/cv/669835187/api.js'></script></head>
+    <body>
+        <div id="wrapper">
+            <div id="menu">
+                <p class="welcome">Welcome, <b></b></p>
+                <p class="logout"><a id="exit" href="#">Exit Chat</a></p>
+            </div>
+
+            <div id="chatbox">
+                <p id="p">{{pred}}</p>
+            </div>
+
+            <form action='/predict' method='POST'>
+                <input name="usermsg" type="text" id="usermsg" />
+                <!-- <input name="submitmsg" type="submit" id="submitmsg" value="Send" /> -->
+                <button type="submit" class="submitmsg">Send</button>
+            </form>
+            <br>
+            <a href="upload.html">Upload chest Xray</a>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            // jQuery Document
+            $(document).ready(function () {});
+            $("#submitmsg").click(function () {
+                var clientmsg = $("#usermsg").val();
+                document.getElementById("p").textContent += 'User: ' + clientmsg + '\n';
+            });
+        </script>
+    <script type="text/javascript">(function(){window['__CF$cv$params']={r:'6d591bda6d2a83f3',m:'8QmRUXmR5MYm0BkPoceir0dONo0iMOZftr90ipQu9J8-1643529020-0-Ab6P7U9+OvxRwplIkiLauO5qKtWdAkcNxj0WZMvQTrHL4a5RJ5Wfo8IxBTvPZe5Fyv11XfyEenwZRApQj3Zepi/Ic2XpxFHcaTbLOl38XeWvnM+8wFqkGZULYhc8anLp5M4hXb35I89HPbe9JFqXRVUeJ6rzWDYfwtAcfYkcK5rNXS8hKQeydqJhTzNk8hugwg==',s:[0xc8cc845880,0x01786a8e8b],}})();</script></body>
+</html>
