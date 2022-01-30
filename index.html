@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+
+        <title>Apollo COVID-19 Chatbot</title>
+        <meta name="description" content="Apollo COVID-19 Chatbot" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="menu">
+                <p class="welcome">Welcome, <b></b></p>
+                <p class="logout"><a id="exit" href="#">Exit Chat</a></p>
+            </div>
+
+            <div id="chatbox">
+                <p id="p">''</p>
+            </div>
+
+            <form name="message" action="">
+                <input name="usermsg" type="text" id="usermsg" />
+                <input name="submitmsg" type="submit" id="submitmsg" value="Send" />
+            </form>
+        </div>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            // jQuery Document
+            $(document).ready(function () {});
+            $("#submitmsg").click(function () {
+                var clientmsg = $("#usermsg").val();
+                document.getElementById("p").textContent += 'User: ' + clientmsg + '\n';
+            });
+        </script>
+    </body>
+</html>
